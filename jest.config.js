@@ -26,6 +26,7 @@ module.exports = {
     // Handle module aliases
     '^@/components/(.*)$': '<rootDir>/components/$1',
   },
+  
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
@@ -36,7 +37,9 @@ module.exports = {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
   transformIgnorePatterns: [
-    '/node_modules/',
+   
     '^.+\\.module\\.(css|sass|scss)$',
+    "/node_modules/(?!(@govtechsg/sgds-react)/)",
+    //  '/node_modules/',
   ],
 }

@@ -4,11 +4,10 @@ import '@testing-library/jest-dom'
  
 describe('Home', () => {
   it('renders a heading', () => {
-    expect(1).toEqual(1)
-    // render(<Home />)
+    render(<Home />)
  
-    // const heading = screen.getByText('Find in-depth')
+    const heading = screen.getByText('Card Title')
  
-    // expect(heading).toBeInTheDocument()
+    expect(heading).toBeInTheDocument()
   })
 })
